@@ -48,3 +48,37 @@ $a = ++$z;
 echo "a = $a, z = $z \n";
 
 
+$z += 5; // $z = $z + 5;
+$z -= 3; // $z = $z - 3;
+$z /= 2; // $z = $z / 2;
+$z %= 2; // $z = $z % 2;
+$z *= 3; // $z = $z * 3;
+
+if($z > 5)
+{
+    echo "Z is greater than 5";
+}
+else if($z == 5)
+{
+    echo "Z is equal to 5\n";
+}
+else if($z >= 5)
+{
+    // dead code, unreachable code
+}
+else
+{
+    echo "Z is smaller than 5\n";
+}
+
+$x = 3; // 0011 -> 0001 
+$z = $x << 3;  // shift operator
+
+echo $z;
+
+// loops
+// for loop
+for($i = 0; $i < 50; $i++)
+{
+    echo "I am a good programmer.";
+}
