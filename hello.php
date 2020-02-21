@@ -56,7 +56,7 @@ $z *= 3; // $z = $z * 3;
 
 if($z > 5)
 {
-    echo "Z is greater than 5";
+    echo "Z is greater than 5\n";
 }
 else if($z == 5)
 {
@@ -74,11 +74,8 @@ else
 $x = 3; // 0011 -> 0001 
 $z = $x << 3;  // shift operator
 
-echo $z;
+echo $z . "\n";
 
-// loops
-// for loop
-for($i = 0; $i < 50; $i++)
-{
-    echo "I am a good programmer.";
-}
+$input = readline("Please enter something:");
+$lineParts = explode(',', $input);
+print_r($lineParts);
