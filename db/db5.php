@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database = "devskill"; 
+$database = "phpdemo"; 
 $username = "root";
 $password = "";
 $sql = "mysql:host=$servername;dbname=$database;";
@@ -16,7 +16,7 @@ try {
 $studentid = "5";
 $name = "Mr. X";
 
-$my_Insert_Statement = $my_Db_Connection->prepare("UPDATE Students SET name = :name WHERE studentid = :studentid");
+$my_Insert_Statement = $my_Db_Connection->prepare("UPDATE Students SET name = :name WHERE id = :studentid");
 $my_Insert_Statement->bindParam(':studentid', $studentid, PDO::PARAM_INT);
 $my_Insert_Statement->bindParam(':name', $name, PDO::PARAM_STR);
 

@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database = "laravel";
+$database = "phpdemo";
 $username = "root";
 $password = "";
 
@@ -12,7 +12,7 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO Students (id, name) VALUES (2, 'Tareq')";
+$sql = "INSERT INTO Students (name, is_active) VALUES ('Hasan', false)";
 if (mysqli_query($conn, $sql)) {
       echo "New record created successfully";
 } else {

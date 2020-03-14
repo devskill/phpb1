@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database = "devskill"; 
+$database = "phpdemo"; 
 $username = "root";
 $password = "";
 $sql = "mysql:host=$servername;dbname=$database;";
@@ -15,8 +15,8 @@ try {
 
 $studentid = "4";
 
-$my_Insert_Statement = $my_Db_Connection->prepare("DELETE FROM Students WHERE studentid = :studentid");
-$my_Insert_Statement->bindParam(':studentid', $studentid);
+$my_Insert_Statement = $my_Db_Connection->prepare("DELETE FROM Students WHERE id = :id");
+$my_Insert_Statement->bindParam(':id', $studentid);
 
 if ($my_Insert_Statement->execute()) {
   echo "Record deleted successfully";

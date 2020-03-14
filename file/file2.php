@@ -1,5 +1,5 @@
 <?php
-$filename = "E:\TestProjects\PHPWork\dummy.txt";
+$filename = "C:/Work/PHPNEW/phpb1/demo.txt";
 
 $file = fopen($filename, "r");
 

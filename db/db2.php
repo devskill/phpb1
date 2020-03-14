@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database = "devskill"; 
+$database = "phpdemo"; 
 $username = "root";
 $password = "";
 $sql = "mysql:host=$servername;dbname=$database;";
@@ -14,11 +14,11 @@ try {
 }
 
 $name = "Thom";
-$studentid = "5";
+$is_active = true;
 
-$my_Insert_Statement = $my_Db_Connection->prepare("INSERT INTO Students (studentid, name) VALUES (:studentid, :name)");
+$my_Insert_Statement = $my_Db_Connection->prepare("INSERT INTO Students (name, is_active) VALUES (:name, :is_active)");
 
-$my_Insert_Statement->bindParam(':studentid', $studentid);
+$my_Insert_Statement->bindParam(':is_active', $is_active);
 $my_Insert_Statement->bindParam(':name', $name);
 
 
@@ -29,7 +29,7 @@ if ($my_Insert_Statement->execute()) {
 }
 
 $name = "John";
-$studentid = 6;
+$is_active = false;
 
 if ($my_Insert_Statement->execute()) {
   echo "New record created successfully";
